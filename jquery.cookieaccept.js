@@ -64,7 +64,7 @@
 
       // Part of cA block
       var block = $('<div class="cookieAccept cA-main"></div>');
-      var textBlock = $('<div class="cA-block cA-text-block"><div class="">' + blockOptions.text + '</div></div>');
+      var textBlock = $('<div class="cA-block cA-text-block"><div class="cA-text">' + blockOptions.text + '</div></div>');
       var btnBlock = $('<div class="cA-block cA-btn-block"></div>');
       var btn =$('<button type="button" class="cA-btn">' + blockOptions.textButton + '</button>');
       var close = $('<div class="cA-close"></div>');
