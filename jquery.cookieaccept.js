@@ -111,6 +111,7 @@
       // Set cookie on 'Got it'
       btn.click(function () {
         setCookie('cA_cookie', 'gotIt', {expires: 3600 * 24 * blockOptions.expires, path: '/'});
+        block.addClass('cA-closed');
       });
       btnBlock.append(btn);
 
