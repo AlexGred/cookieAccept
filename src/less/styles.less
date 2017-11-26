@@ -1,0 +1,64 @@
+// out: false
+
+.cA-main {
+  position: fixed;
+  padding: 40px;
+  display: block;
+  background: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  &.bottomLeft {
+    bottom: 0;
+    left: 0;
+  }
+
+  &.full {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &.cA-closed {
+    display: none !important;
+  }
+
+  .cA-text-block {
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 20px;
+  }
+
+  .cA-text {
+    font-size: 14px;
+  }
+
+  .cA-btn-block {
+    width: 20%;
+    float: right;
+    text-align: right;
+
+    .cA-btn {
+      background: none;
+      box-shadow: none;
+      padding: 0 20px;
+      margin-right: 20px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 1;
+      outline: none;
+      border: 2px solid #555555;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .cA-close {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 20px;
+    height: 20px;
+    background: url('../images/cA-close.svg') no-repeat center center;
+  }
+}
