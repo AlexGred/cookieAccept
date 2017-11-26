@@ -1,0 +1,28 @@
+{
+  "name": "cookieAccept",
+  "version": "0.1.0",
+  "description": "JQuery library for cookie",
+  "main": "jquery.cookieaccept.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexGred/cookieAccept.git"
+  },
+  "keywords": [
+    "cookie",
+    "jquery",
+    "js",
+    "accept"
+  ],
+  "author": "Alex Dolzhenkov <alexgred.dev@gmail.com>",
+  "contributors": [
+    {
+      "name": "AlexGred",
+      "email": "alexgred.dev@gmail.com",
+      "url": "https://github.com/AlexGred"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexGred/cookieAccept/issues"
+  }
+}
