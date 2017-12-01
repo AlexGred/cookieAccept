@@ -11,8 +11,8 @@
     var options = {
       checkCookie: true,
       expires: 3,
-      position: 'bottom-left',
       type: 'full',
+      position: 'bottom-left',
       text: 'This website uses cookies to ensure you get the best experience on our website.',
       textButton: 'Got it!'
     };
