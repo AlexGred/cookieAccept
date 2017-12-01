@@ -13,7 +13,7 @@
       expires: 3,
       type: 'full',
       position: 'bottom-left',
-      text: 'This website uses cookies to ensure you get the best experience on our website.',
+      description: 'This website uses cookies to ensure you get the best experience on our website.',
       textButton: 'Got it!'
     };
     $.extend(options, useroptions);
@@ -64,7 +64,7 @@
 
       // Part of cA block
       var block = $('<div class="ca-block ca-block_fixed"></div>');
-      var textBlock = $('<div class="ca-block__item  ca-block__item_text"><div class="ca-block__text">' + blockOptions.text + '</div></div>');
+      var textBlock = $('<div class="ca-block__item  ca-block__item_text"><div class="ca-block__text">' + blockOptions.description + '</div></div>');
       var btnBlock = $('<div class="ca-block__item ca-block__item_btn"></div>');
       var btn =$('<button type="button" class="ca-block__btn">' + blockOptions.textButton + '</button>');
       var close = $('<div class="ca-block__close"></div>');
