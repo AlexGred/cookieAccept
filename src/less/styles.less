@@ -1,64 +1,71 @@
 // out: false
 
-.cA-main {
-  position: fixed;
+.ca-block {
   padding: 40px;
   display: block;
   background: #ffffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 
-  &.bottomLeft {
+  &_fixed {
+    position: fixed;
+  }
+
+  &_bottom_left {
     bottom: 0;
     left: 0;
   }
 
-  &.full {
+  &_full {
     width: 100%;
     box-sizing: border-box;
   }
 
-  &.cA-closed {
-    display: none !important;
+  &__item {
+    box-sizing: border-box;
+    display: block;
   }
 
-  .cA-text-block {
+  &__item_text {
     width: 80%;
     float: left;
-    box-sizing: border-box;
     padding-right: 20px;
   }
 
-  .cA-text {
-    font-size: 14px;
-  }
-
-  .cA-btn-block {
+  &__item_btn {
     width: 20%;
     float: right;
     text-align: right;
-
-    .cA-btn {
-      background: none;
-      box-shadow: none;
-      padding: 0 20px;
-      margin-right: 20px;
-      height: 32px;
-      font-size: 14px;
-      line-height: 1;
-      outline: none;
-      border: 2px solid #555555;
-      text-align: center;
-      cursor: pointer;
-    }
   }
 
-  .cA-close {
+  &__text {
+    font-size: 14px;
+  }
+
+  &__btn {
+    background: none;
+    box-shadow: none;
+    padding: 0 20px;
+    margin-right: 20px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 1;
+    outline: none;
+    border: 2px solid #555555;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__close {
     position: absolute;
     top: 10px;
     right: 40px;
     width: 20px;
     height: 20px;
-    background: url('../images/cA-close.svg') no-repeat center center;
+    background: url('../images/ca-block-close.svg') no-repeat center center;
+  }
+
+  &__close_closed {
+    display: none !important;
   }
 }
