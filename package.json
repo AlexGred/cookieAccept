@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexGred/cookieAccept.git"
+    "url": "https://github.com/alexgred/cookieAccept.git"
   },
   "keywords": [
     "cookie",
@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlexGred/cookieAccept/issues"
+    "url": "https://github.com/alexgred/cookieAccept/issues"
   },
   "devDependencies": {
     "del": "^3.0.0",
