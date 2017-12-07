@@ -10,3 +10,6 @@ type | string | 'full' | Type of view block. Full - full width of window. Corner
 position | string | 'bottom-left' | Position in window.
 description | string | 'This website uses cookies to ensure you get the best experience on our website.' | Description of block.
 textButton | string | 'Got it!' | Button text.
+
+## Dependencies
+[JQuery](http://jquery.com/download/)
