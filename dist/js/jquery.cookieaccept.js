@@ -11,9 +11,9 @@
     var options = {
       checkCookie: true,
       expires: 3,
-      position: 'bottomLeft',
       type: 'full',
-      text: 'This website uses cookies to ensure you get the best experience on our website.',
+      position: 'bottom-left',
+      description: 'This website uses cookies to ensure you get the best experience on our website.',
       textButton: 'Got it!'
     };
     $.extend(options, useroptions);
@@ -63,55 +63,55 @@
       $.extend(blockOptions, options);
 
       // Part of cA block
-      var block = $('<div class="cookieAccept cA-main"></div>');
-      var textBlock = $('<div class="cA-block cA-text-block"><div class="cA-text">' + blockOptions.text + '</div></div>');
-      var btnBlock = $('<div class="cA-block cA-btn-block"></div>');
-      var btn =$('<button type="button" class="cA-btn">' + blockOptions.textButton + '</button>');
-      var close = $('<div class="cA-close"></div>');
+      var block = $('<div class="ca-block ca-block_fixed"></div>');
+      var textBlock = $('<div class="ca-block__item  ca-block__item_text"><div class="ca-block__text">' + blockOptions.description + '</div></div>');
+      var btnBlock = $('<div class="ca-block__item ca-block__item_btn"></div>');
+      var btn =$('<button type="button" class="ca-block__btn">' + blockOptions.textButton + '</button>');
+      var close = $('<div class="ca-block__close"></div>');
 
       // Check position and add class
       switch (blockOptions.position) {
-        case 'bottomLeft':
-          block.addClass('bottomLeft');
+        case 'bottom-left':
+          block.addClass('ca-block_bottom_left');
           break;
-        case 'bottomRight':
-          block.addClass('bottomRight');
+        case 'bottom-light':
+          block.addClass('ca-block_bottom_right');
           break;
-        case 'topLeft':
-          block.addClass('topLeft');
+        case 'top-left':
+          block.addClass('ca-block_top_left');
           break;
-        case 'topRight':
-          block.addClass('topRight');
+        case 'top-ight':
+          block.addClass('ca-block_top_right');
           break;
 
         default:
-          block.addClass('bottomLeft');
+          block.addClass('ca-block_bottom_left');
           break;
       }
 
       // Check type and add class
       switch (blockOptions.type) {
         case 'full':
-          block.addClass('full');
+          block.addClass('ca-block_full');
           break;
         case 'corner':
-          block.addClass('corner');
+          block.addClass('ca-block_corner');
           break;
 
         default:
-          block.addClass('full');
+          block.addClass('ca-block_full');
           break;
       }
 
       // Close cA block
       close.click(function () {
-        block.addClass('cA-closed');
+        block.addClass('ca-block__close_closed');
       });
 
       // Set cookie on 'Got it'
       btn.click(function () {
-        setCookie('cA_cookie', 'gotIt', {expires: 3600 * 24 * blockOptions.expires, path: '/'});
-        block.addClass('cA-closed');
+        setCookie('ca_cookie', 'gotIt', {expires: 3600 * 24 * blockOptions.expires, path: '/'});
+        block.addClass('ca-block__close_closed');
       });
       btnBlock.append(btn);
 
@@ -121,7 +121,7 @@
       // Check checkCookie
       if (blockOptions.checkCookie) {
 
-        if (getCookie('cA_cookie') === undefined) {
+        if (getCookie('ca_cookie') === undefined) {
           $elem.append(block);
         }
       }
