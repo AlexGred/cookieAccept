@@ -64,30 +64,10 @@
 
       // Part of cA block
       var block = $('<div class="ca-block ca-block_fixed"></div>');
-      var textBlock = $('<div class="ca-block__item  ca-block__item_text"><div class="ca-block__text">' + blockOptions.description + '</div></div>');
+      var textBlock = $('<div class="ca-block__item ca-block__item_text"><div class="ca-block__text">' + blockOptions.description + '</div></div>');
       var btnBlock = $('<div class="ca-block__item ca-block__item_btn"></div>');
       var btn =$('<button type="button" class="ca-block__btn">' + blockOptions.textButton + '</button>');
       var close = $('<div class="ca-block__close"></div>');
-
-      // Check position and add class
-      switch (blockOptions.position) {
-        case 'bottom-left':
-          block.addClass('ca-block_bottom_left');
-          break;
-        case 'bottom-light':
-          block.addClass('ca-block_bottom_right');
-          break;
-        case 'top-left':
-          block.addClass('ca-block_top_left');
-          break;
-        case 'top-ight':
-          block.addClass('ca-block_top_right');
-          break;
-
-        default:
-          block.addClass('ca-block_bottom_left');
-          break;
-      }
 
       // Check type and add class
       switch (blockOptions.type) {
@@ -100,6 +80,26 @@
 
         default:
           block.addClass('ca-block_full');
+          break;
+      }
+
+      // Check position and add class
+      switch (blockOptions.position) {
+        case 'bottom-left':
+          block.addClass('ca-block_bottom_left');
+          break;
+        case 'bottom-right':
+          block.addClass('ca-block_bottom_right');
+          break;
+        case 'top-left':
+          block.addClass('ca-block_top_left');
+          break;
+        case 'top-right':
+          block.addClass('ca-block_top_right');
+          break;
+
+        default:
+          block.addClass('ca-block_bottom_left');
           break;
       }
 
