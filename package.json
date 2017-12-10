@@ -29,6 +29,7 @@
     "url": "https://github.com/alexgred/cookieAccept/issues"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.9.0",

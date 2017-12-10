@@ -8,6 +8,7 @@ const uglify = require('gulp-uglify');
 const pump = require('pump');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const browserSync = require('browser-sync');
 
 
 /* Dev
@@ -34,13 +35,6 @@ gulp.task('dev:images', function() {
   
   return gulp.src('./src/images/*')
     .pipe(gulp.dest('./public/images'));
-});
-
-/* Entry */
-gulp.task('dev:entry', function() {
-
-  return gulp.src('./src/index.html')
-    .pipe(gulp.dest('./public'));
 });
 
 
@@ -112,6 +106,19 @@ gulp.task('prod:clean', function() {
 });
 
 
+/* Sync
+========================== */
+gulp.task('sync', function() {
+  browserSync.init({
+    server: './'
+  });
+
+  browserSync.watch('./public/css/*.css').on('change', browserSync.reload);
+  browserSync.watch('./public/js/*.js').on('change', browserSync.reload);
+  browserSync.watch('./index.html').on('change', browserSync.reload);
+});
+
+
 /*  Build
 ========================== */
 
@@ -125,13 +132,13 @@ gulp.task('watch', function() {
 /* Dev build*/
 gulp.task('dev:build', gulp.series(
   'dev:clean', 
-  gulp.parallel('dev:styles', 'dev:images', 'dev:js', 'dev:entry')
+  gulp.parallel('dev:styles', 'dev:images', 'dev:js')
 ));
 
 /* Dev  build + watch */
 gulp.task('dev', gulp.series(
   'dev:build',
-  'watch'
+  gulp.parallel('watch', 'sync')
 ));
 
 
