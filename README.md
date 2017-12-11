@@ -1,6 +1,8 @@
 # cookieAccept
 JQuery library for cookie
 
+## Instalation
+
 ## Settings
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
