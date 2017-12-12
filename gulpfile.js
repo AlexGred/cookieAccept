@@ -46,10 +46,13 @@ gulp.task('prod:styles', function() {
   
   return gulp.src('./src/less/*.less')
     .pipe(less())
+    .pipe(rename({
+      basename: 'cookieaccept',
+    }))
     .pipe(gulp.dest('./dist/css'))
     .pipe(cleanCSS())
     .pipe(rename({
-      basename: 'styles',
+      basename: 'cookieaccept',
       suffix: '.min',
     }))
     .pipe(gulp.dest('./dist/css'));
