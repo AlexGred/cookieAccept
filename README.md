@@ -1,7 +1,26 @@
 # cookieAccept
-JQuery library for cookie
+JQuery plugin to the EU cookie law.
 
 ## Installation
+
+Just add a link to the css file in your `<head>`:
+```html
+<link rel="stylesheet" type="text/css" src="css/cookieaccept.css" />
+```
+
+Then, before your closing ```<body>``` tag add plugin:
+```html
+<script type="text/javascript" src="js/jquery.cookieaccept.js"></script>
+```
+
+Init plugin:
+```html
+<script>
+    $('body').cookieAccept();
+</script>
+```
+
+
 
 ## Settings
 Option | Type | Default | Description
@@ -15,3 +34,7 @@ textButton | string | 'Got it!' | Button text.
 
 ## Dependencies
 [JQuery](http://jquery.com/download/)
+
+
+## License
+CookieAccept is Copyright © Alex Dolzhenkov and is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
