@@ -13,7 +13,7 @@ Then, before your closing ```<body>``` tag add plugin:
 Init plugin:
 ```html
 <script>
-    $('body').cookieAccept();
+  $('body').cookieAccept();
 </script>
 ```
 
