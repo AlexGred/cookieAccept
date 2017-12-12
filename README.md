@@ -27,7 +27,7 @@ position | string | 'bottom-left' | Position is used to describe where on the sc
 description | string | 'This website uses cookies to ensure you get the best experience on our website.' | Text strings used for description content of block.
 textButton | string | 'Got it!' | Text used for button.
 
-### Example
+#### Example
 Initialize block in top right corner with button text "Ok":
 ```javascript
 $('body').cookieAccept({
